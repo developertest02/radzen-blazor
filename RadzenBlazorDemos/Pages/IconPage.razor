@@ -3,7 +3,7 @@
 <RadzenExample Name="Icon">
 <h3>Material Icons</h3>
 <div class="icons-preview">
-<RadzenIcon Icon="facebook" />
+<RadzenIcon Icon="facebook" MouseEnter="@Icon0MouseEnter"/>
 <RadzenIcon Icon="accessibility" />
 <RadzenIcon Icon="3d_rotation" />
 <RadzenIcon Icon="accessible" />
@@ -135,3 +135,12 @@
 </style>
 <RadzenLink Path="https://material.io/tools/icons/" Text="See all Material icons" target="_blank" />
 </RadzenExample>
+@code{
+        [Inject]
+        protected TooltipService TooltipService { get; set; }
+
+      protected async System.Threading.Tasks.Task Icon0MouseEnter(ElementReference args)
+        {
+            TooltipService.Open(args, $"Derpings");
+        }
+}

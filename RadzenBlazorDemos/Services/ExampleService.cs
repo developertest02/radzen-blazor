@@ -9,6 +9,12 @@ namespace RadzenBlazorDemos
         Example[] allExamples = new[] {
         new Example()
         {
+            Name = "Child",
+            Path = "/child",
+            Icon = "&#xe88a"
+        },
+        new Example()
+        {
             Name = "Overview",
             Path = "/",
             Icon = "&#xe88a"
